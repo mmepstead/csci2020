@@ -64,252 +64,252 @@ public class HandMadeChart extends Application {
                 {
                     case('A'):
                     {
-                        count[1] += 1;
+                        count[0] += 1;
                         break;
                     }
                     case('a'):
                     {
-                        count[1] += 1;
+                        count[0] += 1;
                         break;
                     }
                     case('B'):
                     {
-                        count[2] += 1;
+                        count[1] += 1;
                         break;
                     }
                     case('b'):
                     {
-                        count[2] += 1;
+                        count[1] += 1;
                         break;
                     }
                     case('C'):
                     {
-                        count[3] += 1;
+                        count[2] += 1;
                         break;
                     }
                     case('c'):
                     {
-                        count[3] += 1;
+                        count[2] += 1;
                         break;
                     }
                     case('D'):
                     {
-                        count[4] += 1;
+                        count[3] += 1;
                         break;
                     }
                     case('d'):
                     {
-                        count[4] += 1;
+                        count[3] += 1;
                         break;
                     }
                     case('E'):
                     {
-                        count[5] += 1;
+                        count[4] += 1;
                         break;
                     }
                     case('e'):
                     {
-                        count[5] += 1;
+                        count[4] += 1;
                         break;
                     }
                     case('F'):
                     {
-                        count[6] += 1;
+                        count[5] += 1;
                         break;
                     }
                     case('f'):
                     {
-                        count[6] += 1;
+                        count[5] += 1;
                         break;
                     }
                     case('G'):
                     {
-                        count[7] += 1;
+                        count[6] += 1;
                         break;
                     }
                     case('g'):
                     {
-                        count[7] += 1;
+                        count[6] += 1;
                         break;
                     }
                     case('H'):
                     {
-                        count[8] += 1;
+                        count[7] += 1;
                         break;
                     }
                     case('h'):
                     {
-                        count[8] += 1;
+                        count[7] += 1;
                         break;
                     }
                     case('I'):
                     {
-                        count[9] += 1;
+                        count[8] += 1;
                         break;
                     }
                     case('i'):
                     {
-                        count[9] += 1;
+                        count[8] += 1;
                         break;
                     }
                     case('J'):
                     {
-                        count[10] += 1;
+                        count[9] += 1;
                         break;
                     }
                     case('j'):
                     {
-                        count[10] += 1;
+                        count[9] += 1;
                         break;
                     }
                     case('K'):
                     {
-                        count[11] += 1;
+                        count[10] += 1;
                         break;
                     }
                     case('k'):
                     {
-                        count[11] += 1;
+                        count[10] += 1;
                         break;
                     }
                     case('L'):
                     {
-                        count[12] += 1;
+                        count[11] += 1;
                         break;
                     }
                     case('l'):
                     {
-                        count[12] += 1;
+                        count[11] += 1;
                         break;
                     }
                     case('M'):
                     {
-                        count[13] += 1;
+                        count[12] += 1;
                         break;
                     }
                     case('m'):
                     {
-                        count[13] += 1;
+                        count[12] += 1;
                         break;
                     }
                     case('N'):
                     {
-                        count[14] += 1;
+                        count[13] += 1;
                         break;
                     }
                     case('n'):
                     {
-                        count[14] += 1;
+                        count[13] += 1;
                         break;
                     }
                     case('O'):
                     {
-                        count[15] += 1;
+                        count[14] += 1;
                         break;
                     }
                     case('o'):
                     {
-                        count[15] += 1;
+                        count[14] += 1;
                         break;
                     }
                     case('P'):
                     {
-                        count[16] += 1;
+                        count[15] += 1;
                         break;
                     }
                     case('p'):
                     {
-                        count[16] += 1;
+                        count[15] += 1;
                         break;
                     }
                     case('Q'):
                     {
-                        count[17] += 1;
+                        count[16] += 1;
                         break;
                     }
                     case('q'):
                     {
-                        count[17] += 1;
+                        count[16] += 1;
                         break;
                     }
                     case('R'):
                     {
-                        count[18] += 1;
+                        count[17] += 1;
                         break;
                     }
                     case('r'):
                     {
-                        count[18] += 1;
+                        count[17] += 1;
                         break;
                     }
                     case('S'):
                     {
-                        count[19] += 1;
+                        count[18] += 1;
                         break;
                     }
                     case('s'):
                     {
-                        count[19] += 1;
+                        count[18] += 1;
                         break;
                     }
                     case('T'):
                     {
-                        count[20] += 1;
+                        count[19] += 1;
                         break;
                     }
                     case('t'):
                     {
-                        count[20] += 1;
+                        count[19] += 1;
                         break;
                     }
                     case('U'):
                     {
-                        count[21] += 1;
+                        count[20] += 1;
                         break;
                     }
                     case('u'):
                     {
-                        count[21] += 1;
+                        count[20] += 1;
                         break;
                     }
                     case('V'):
                     {
-                        count[22] += 1;
+                        count[21] += 1;
                         break;
                     }
                     case('v'):
                     {
-                        count[22] += 1;
+                        count[21] += 1;
                         break;
                     }
                     case('W'):
                     {
-                        count[23] += 1;
+                        count[22] += 1;
                         break;
                     }
                     case('w'):
                     {
-                        count[23] += 1;
+                        count[22] += 1;
                         break;
                     }
                     case('X'):
                     {
-                        count[24] += 1;
+                        count[23] += 1;
                         break;
                     }
                     case('x'):
                     {
-                        count[24] += 1;
+                        count[23] += 1;
                         break;
                     }
                     case('Y'):
                     {
-                        count[25] += 1;
+                        count[24] += 1;
                         break;
                     }
                     case('y'):
                     {
-                        count[25] += 1;
+                        count[24] += 1;
                         break;
                     }
                     case('Z'):
