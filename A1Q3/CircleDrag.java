@@ -14,6 +14,7 @@ public class CircleDrag extends Application {
     public void start(Stage primaryStage) {
         // Create a pane and set its properties
         Pane pane = new Pane();
+        //Initialize circle and triangle
         Circle circle = new Circle(200,200,100);
         Circle point1 = new Circle(100,200,5);
         Text angle1 = new Text();
@@ -26,6 +27,7 @@ public class CircleDrag extends Application {
         Polygon triangle = new Polygon();
         triangle.setFill(Color.TRANSPARENT);
         triangle.setStroke(Color.BLACK);
+        //Show initial angles
         angle3.setText(angle(point3,point2,point1));
         angle2.setText(angle(point2,point1,point3));
         angle1.setText(angle(point1,point2,point3));
@@ -39,10 +41,12 @@ public class CircleDrag extends Application {
                 point2.getCenterY(), point3.getCenterX(), point3.getCenterY()});
         pane.getChildren().addAll(point1,point2,point3,triangle, circle,angle1,angle2,angle3);
         point1.setOnMouseDragged(e -> {
+            //Only run if dragged around radius of large circle
             double xdiff = e.getX()-circle.getCenterX();
             double ydiff = e.getY()-circle.getCenterY();
             if(Math.sqrt(xdiff*xdiff + ydiff*ydiff) <= circle.getRadius()+5 &&
                     Math.sqrt(xdiff*xdiff + ydiff*ydiff) >= circle.getRadius()-5){
+                //Move points and reset Angles using formula
                 point1.setCenterX(e.getX());
                 point1.setCenterY(e.getY());
                 angle3.setText(angle(point3,point2,point1));
@@ -58,6 +62,7 @@ public class CircleDrag extends Application {
                         point2.getCenterY(), point3.getCenterX(), point3.getCenterY()});
             }
         });
+        //Same as previous
         point2.setOnMouseDragged(e -> {
             double xdiff = e.getX()-circle.getCenterX();
             double ydiff = e.getY()-circle.getCenterY();
@@ -78,6 +83,7 @@ public class CircleDrag extends Application {
                         point2.getCenterY(), point3.getCenterX(), point3.getCenterY()});
             }
         });
+        //Same as previous
         point3.setOnMouseDragged(e -> {
             double xdiff = e.getX()-circle.getCenterX();
             double ydiff = e.getY()-circle.getCenterY();
@@ -112,6 +118,7 @@ public class CircleDrag extends Application {
 
     public static String angle(Circle point1, Circle point2, Circle point3)
     {
+        //Calculate angle with given point values
         double distance12 = Math.sqrt(
                 (point1.getCenterX()-point2.getCenterX())*(point1.getCenterX()-point2.getCenterX()) +
                         (point1.getCenterY()-point2.getCenterY())*(point1.getCenterY()-point2.getCenterY()) );

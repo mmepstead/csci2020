@@ -32,12 +32,14 @@ public class HandMadeChart extends Application {
         Button btnChart = new Button("Chart");
         int count[] = new int [26];
         btnChart.setOnAction(e -> {
+            //Clear old chart
             hbox.getChildren().clear();
             hbox2.getChildren().clear();
             for(int i=0; i<26; i+=1)
             {
                 count[i] = 0;
             }
+            //Read file name
             File file = new File(text.getText());
             System.out.println(file.exists());
             String fulltext = "";
@@ -54,6 +56,7 @@ public class HandMadeChart extends Application {
                 System.exit(1);
             }
             double total = 0;
+            //Count the characters
             for(char character : fulltext.toCharArray())
             {
                 total += 1;
@@ -325,8 +328,10 @@ public class HandMadeChart extends Application {
             ,"U","V","W","X","Y","Z"};
             for(int i=1; i<=26; i+=1)
             {
+                //For each letter make a rectangle
                 Rectangle rectangle = new Rectangle();
                 Text letter = new Text();
+                //Add letter label in hbox2 below bar
                 letter.setText(letters[i-1]);
                 rectangle.setFill(Color.WHITE);
                 rectangle.setStroke(Color.BLACK);
@@ -334,12 +339,14 @@ public class HandMadeChart extends Application {
                 rectangle.setY(10);
                 rectangle.setHeight(190*(count[i-1]/total));
                 rectangle.setWidth(15);
+                //Need to translate height so rectangle isn't upside down
                 rectangle.setTranslateY(190-rectangle.getHeight());
                 hbox.getChildren().add(rectangle);
                 hbox2.getChildren().add(letter);
             }
 
         });
+        //Add Everything to pane with proper spacing and sizes
         VBox vbox = new VBox();
         vbox.setMinWidth(400);
         vbox.getChildren().add(hbox);

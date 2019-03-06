@@ -15,6 +15,7 @@ import javafx.stage.Stage;
 import java.lang.String;
 
 public class Calculate extends Application {
+    //Initialize text fields
     private TextField investment = new TextField();
     private TextField years = new TextField();
     private TextField interest = new TextField();
@@ -34,6 +35,7 @@ public class Calculate extends Application {
         primaryStage.show();
     }
     private VBox getVBox() {
+        //Series of Hboxes within vbox (Could do this cleaner with multiple VBoxes in HBox but was re-using code)
         VBox vbox = new VBox();
         Button btnCalculate = new Button("Calculate");
         btnCalculate.setOnAction(new CalculateHandler());
@@ -51,6 +53,7 @@ public class Calculate extends Application {
         interest_box.getChildren().add(new Label("Annual Interest Rate"));
         interest_box.getChildren().add(interest);
         HBox value_box = new HBox();
+        //Make sure final result can't be edited
         value_box.setSpacing(57);
         value.setEditable(false);
         value_box.getChildren().addAll(new Label("Future Value"), value);
@@ -63,6 +66,7 @@ public class Calculate extends Application {
     {
         @Override
         public void handle(ActionEvent e) {
+            //Calculate value and place in box
             double investment_value = Double.valueOf(investment.getText());
             double years_value = Double.valueOf(years.getText());
             double interest_value = Double.valueOf(interest.getText());

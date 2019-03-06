@@ -23,6 +23,7 @@ public class Main extends Application {
         pane.setPadding(new Insets(11.5, 12.5, 13.5, 14.5));
         pane.setHgap(5.5);
         pane.setVgap(5.5);
+        //Choose Random number between 1 and 54
         double randomDouble = Math.random();
         randomDouble = randomDouble * 54 + 1;
         int randomInt1 = (int) randomDouble;
@@ -49,6 +50,7 @@ public class Main extends Application {
                 randomInt3 = -1;
             }
         }
+        //Add the three image views to pane
         Image card2 = new Image("A1Q1/Cards/" + randomInt2 + ".png");
         Image card3 = new Image("A1Q1/Cards/" + randomInt3 + ".png");
         // Place nodes in the pane
