@@ -5,6 +5,7 @@ import javafx.application.Application;
 import java.io.IOException;
 import java.util.Scanner;
 import java.io.File;
+import javafx.geometry.Insets;
 import javafx.collections.ObservableList;
 import javafx.scene.Scene;
 import javafx.scene.chart.BarChart;
@@ -362,10 +363,11 @@ public class Graph extends Application {
 
         VBox vbox = new VBox();
         vbox.getChildren().add(letters);
+        vbox.setPadding(new Insets(15,15,15,15));
         BorderPane pane = new BorderPane();
         vbox.getChildren().addAll(text, btnChart);
         pane.setLeft(vbox);
-        Scene scene = new Scene(pane, 400, 200);
+        Scene scene = new Scene(pane, 800, 600);
         primaryStage.setTitle("Calculate");
         primaryStage.setScene(scene);
         primaryStage.show();
