@@ -26,6 +26,17 @@ public class CircleDrag extends Application {
         Polygon triangle = new Polygon();
         triangle.setFill(Color.TRANSPARENT);
         triangle.setStroke(Color.BLACK);
+        angle3.setText(angle(point3,point2,point1));
+        angle2.setText(angle(point2,point1,point3));
+        angle1.setText(angle(point1,point2,point3));
+        angle1.setX(point1.getCenterX()+10);
+        angle1.setY(point1.getCenterY()+10);
+        angle2.setX(point2.getCenterX()+10);
+        angle2.setY(point2.getCenterY()+10);
+        angle3.setX(point3.getCenterX()+10);
+        angle3.setY(point3.getCenterY()+10);
+        triangle.getPoints().setAll(new Double[]{point1.getCenterX(), point1.getCenterY(), point2.getCenterX(),
+                point2.getCenterY(), point3.getCenterX(), point3.getCenterY()});
         pane.getChildren().addAll(point1,point2,point3,triangle, circle,angle1,angle2,angle3);
         point1.setOnMouseDragged(e -> {
             double xdiff = e.getX()-circle.getCenterX();
@@ -39,6 +50,10 @@ public class CircleDrag extends Application {
                 angle1.setText(angle(point1,point2,point3));
                 angle1.setX(point1.getCenterX()+10);
                 angle1.setY(point1.getCenterY()+10);
+                angle2.setX(point2.getCenterX()+10);
+                angle2.setY(point2.getCenterY()+10);
+                angle3.setX(point3.getCenterX()+10);
+                angle3.setY(point3.getCenterY()+10);
                 triangle.getPoints().setAll(new Double[]{point1.getCenterX(), point1.getCenterY(), point2.getCenterX(),
                         point2.getCenterY(), point3.getCenterX(), point3.getCenterY()});
             }
@@ -53,8 +68,12 @@ public class CircleDrag extends Application {
                 angle3.setText(angle(point3,point2,point1));
                 angle2.setText(angle(point2,point1,point3));
                 angle1.setText(angle(point1,point2,point3));
+                angle1.setX(point1.getCenterX()+10);
+                angle1.setY(point1.getCenterY()+10);
                 angle2.setX(point2.getCenterX()+10);
                 angle2.setY(point2.getCenterY()+10);
+                angle3.setX(point3.getCenterX()+10);
+                angle3.setY(point3.getCenterY()+10);
                 triangle.getPoints().setAll(new Double[]{point1.getCenterX(), point1.getCenterY(), point2.getCenterX(),
                         point2.getCenterY(), point3.getCenterX(), point3.getCenterY()});
             }
@@ -69,6 +88,10 @@ public class CircleDrag extends Application {
                 angle3.setText(angle(point3,point2,point1));
                 angle2.setText(angle(point2,point1,point3));
                 angle1.setText(angle(point1,point2,point3));
+                angle1.setX(point1.getCenterX()+10);
+                angle1.setY(point1.getCenterY()+10);
+                angle2.setX(point2.getCenterX()+10);
+                angle2.setY(point2.getCenterY()+10);
                 angle3.setX(point3.getCenterX()+10);
                 angle3.setY(point3.getCenterY()+10);
                 triangle.getPoints().setAll(new Double[]{point1.getCenterX(), point1.getCenterY(), point2.getCenterX(),
@@ -76,8 +99,8 @@ public class CircleDrag extends Application {
             }
         });
         // Create a scene and place it in the stage
-        Scene scene = new Scene(pane, 300, 100);
-        primaryStage.setTitle("MouseEventDemo"); // Set the stage title
+        Scene scene = new Scene(pane, 425, 400);
+        primaryStage.setTitle("Circle With Triangle"); // Set the stage title
         primaryStage.setScene(scene); // Place the scene in the stage
         primaryStage.show(); // Display the stage
     }
