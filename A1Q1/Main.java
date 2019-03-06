@@ -28,7 +28,7 @@ public class Main extends Application {
         int randomInt1 = (int) randomDouble;
         int randomInt2 = -1;
         int randomInt3 = -1;
-        Image card1 = new Image("file:///C:/Users/Matthew/Documents/Assignment/Cards/" + randomInt1 + ".png");
+        Image card1 = new Image("A1Q1/Cards/" + randomInt1 + ".png");
         while(randomInt2 == -1)
         {
             double randomDouble2 = Math.random();
@@ -49,8 +49,8 @@ public class Main extends Application {
                 randomInt3 = -1;
             }
         }
-        Image card2 = new Image("file:///C:/Users/Matthew/Documents/Assignment/Cards/" + randomInt2 + ".png");
-        Image card3 = new Image("file:///C:/Users/Matthew/Documents/Assignment/Cards/" + randomInt3 + ".png");
+        Image card2 = new Image("A1Q1/Cards/" + randomInt2 + ".png");
+        Image card3 = new Image("A1Q1/Cards/" + randomInt3 + ".png");
         // Place nodes in the pane
         pane.add(new ImageView(card1), 0, 0);
         pane.add(new ImageView(card2), 1, 0);
